@@ -1,0 +1,10 @@
+sudo: reqiuired
+services:
+    - docker
+
+before_intstall:
+    - docker build -f Dockerfile.dev -t akki1989/docker-react:latest .
+
+script:
+    - docker run akki1989/docker-react npm run test -- --coverage
+
