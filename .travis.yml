@@ -3,7 +3,7 @@ sudo: reqiuired
 services:
     - docker
 
-before_intstall:
+before_install:
     - docker build -f Dockerfile.dev -t akki1989/docker-react:latest .
 
 script:
